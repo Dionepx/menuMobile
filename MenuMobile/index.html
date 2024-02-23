@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header id="header">
+        <div class="inner-header">
+            <div class="black-belt">
+                <div class="menu">
+                    <nav>
+                        <a href="">Home</a>
+                        <a href="">Blog</a>
+                        <a href="">Sobre nós</a>
+                        <a href="">Contato</a>
+                    </nav>
+                </div>
+                <div class="linhas">
+                    <a href="">
+                        <button id="btn">
+                            <div class="linha"></div>
+                            <div class="linha"></div>
+                            <div class="linha"></div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu desktop -->
+    
+
+    <!-- Menu mobile -->
+
+    <div class="menu-mobile">
+        <nav>
+            <a id="home" href="">Home</a>
+            <a id="blog" href="">Blog</a>
+            <a id="sobre-nos" href="">Sobre nós</a>
+            <a id="contato" href="">Contato</a>
+        </nav>
+    </div>
+
+    <script>
+
+        //Pra criar o evento de aparecer e desaparecer ao ser clicado:
+        //1) metodo toggle
+        //2) funcao: display: none no menu como padrao e display block pra aparecer
+        //3) chame o parametro "show" no css com um ponto
+
+        document.getElementById("btn").addEventListener("click", (e) => {
+            e.preventDefault()
+            
+            const menuMobile = document.querySelector(".menu-mobile");
+            menuMobile.classList.toggle("show") //metodo que cria o evento de aparecer e desaparecer ao ser clicado
+        })        
+        
+        //Secoes
+        document.getElementById("home").addEventListener("click", (e) => {
+            e.preventDefault()
+            location.href="home.html"
+        })
+
+        document.getElementById("blog").addEventListener("click", (e) => {
+            e.preventDefault()
+            location.href="blog.html"
+        })
+
+        document.getElementById("sobre-nos").addEventListener("click", (e) => {
+            e.preventDefault()
+            location.href="sobre-nos.html"
+        })
+
+        document.getElementById("contato").addEventListener("click", (e) => {
+            e.preventDefault()
+            location.href="contato.html"
+        })
+
+    </script>
+
+</body>
+</html>
